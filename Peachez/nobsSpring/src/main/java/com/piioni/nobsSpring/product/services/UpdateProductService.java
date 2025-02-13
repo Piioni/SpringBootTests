@@ -6,7 +6,6 @@ import com.piioni.nobsSpring.product.ProductRepository;
 import com.piioni.nobsSpring.product.model.Product;
 import com.piioni.nobsSpring.product.model.ProductDTO;
 import com.piioni.nobsSpring.product.model.UpdateProductCommand;
-import com.piioni.nobsSpring.product.validators.ProductValidator;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
