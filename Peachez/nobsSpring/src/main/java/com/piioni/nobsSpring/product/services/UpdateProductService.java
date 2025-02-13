@@ -1,6 +1,7 @@
 package com.piioni.nobsSpring.product.services;
 
 import com.piioni.nobsSpring.Command;
+import com.piioni.nobsSpring.exceptions.ProductNotFoundException;
 import com.piioni.nobsSpring.product.ProductRepository;
 import com.piioni.nobsSpring.product.model.Product;
 import com.piioni.nobsSpring.product.model.ProductDTO;
@@ -28,8 +29,7 @@ public class UpdateProductService implements Command<UpdateProductCommand, Produ
             return ResponseEntity.ok(new ProductDTO(product));
         }
 
-        // TODO return 404 if product not found
-        return null;
+        throw new ProductNotFoundException();
     }
 
 }

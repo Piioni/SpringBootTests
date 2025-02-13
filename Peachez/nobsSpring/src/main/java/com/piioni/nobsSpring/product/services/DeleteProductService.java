@@ -1,6 +1,7 @@
 package com.piioni.nobsSpring.product.services;
 
 import com.piioni.nobsSpring.Command;
+import com.piioni.nobsSpring.exceptions.ProductNotFoundException;
 import com.piioni.nobsSpring.product.ProductRepository;
 import com.piioni.nobsSpring.product.model.Product;
 import org.springframework.http.HttpStatus;
@@ -25,7 +26,7 @@ public class DeleteProductService implements Command<Integer, Void> {
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         }
 
-        return null;
+        throw new ProductNotFoundException();
     }
 
 }

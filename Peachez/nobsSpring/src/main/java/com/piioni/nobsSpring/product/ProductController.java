@@ -6,7 +6,6 @@ import com.piioni.nobsSpring.product.model.UpdateProductCommand;
 import com.piioni.nobsSpring.product.services.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -62,6 +61,5 @@ public class ProductController {
     public ResponseEntity<Void> deleteProduct(@PathVariable Integer id) {
         return deleteProductService.execute(id);
     }
-
 
 }
