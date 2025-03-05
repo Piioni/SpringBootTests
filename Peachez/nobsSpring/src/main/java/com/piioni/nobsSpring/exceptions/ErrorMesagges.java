@@ -1,5 +1,8 @@
 package com.piioni.nobsSpring.exceptions;
 
+import lombok.Getter;
+
+@Getter
 public enum ErrorMesagges {
     PRODUCT_NOT_FOUND("Product not found"),
     NAME_REQUIRED("Product name is required"),
@@ -14,7 +17,4 @@ public enum ErrorMesagges {
         this.message = message;
     }
 
-    public String getMessage() {
-        return message;
-    }
 }
